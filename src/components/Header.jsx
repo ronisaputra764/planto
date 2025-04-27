@@ -1,5 +1,4 @@
 import { FaPlay } from "react-icons/fa";
-import AnimatedContent from "../utils/AnimatedContent";
 import { motion } from "motion/react"
 
 export default function Header() {
