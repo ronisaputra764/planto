@@ -25,7 +25,7 @@ const CustomerReview = () => {
     const titleInView = useInView(titleRef, { once: true });
 
     return (
-        <div className="flex justify-center flex-col items-center mt-[1940px] md:mt-[1850px] lg:mt-[2300px] ">
+        <div className="flex justify-center flex-col items-center mt-[1870px] md:mt-[1890px] lg:mt-[2320px] ">
             <motion.div
                 ref={titleRef}
                 initial={{ opacity: 0, y: 200 }}

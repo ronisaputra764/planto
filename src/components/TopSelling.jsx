@@ -66,12 +66,13 @@ export default function TopSelling() {
                             initial={{ opacity: 0, y: 50 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="bg-white/3 py-4 custom-shadow mt-7 -top-5 backdrop-blur-md flex w-[170px] md:w-[220px] lg:w-[280px] flex-col justify-center items-center rounded-4xl border border-white/10"
+                            className="bg-white/3 py-4 custom-shadow mt-2 md:mt-7 -top-5 backdrop-blur-md flex w-[170px] md:w-[220px] lg:w-[280px] flex-col justify-center items-center rounded-4xl border border-white/10"
                         >
-                            <div className=" ">
-                                <img className="absolute  left-0 right-0  -top-10 md:-top-19" src={`/assets/img/${plant.image}`} alt={plant.name} />
+                            <div className="relative w-full flex justify-center items-center">
+                                <img className=" -mt-12 md:-mt-20" src={`/assets/img/${plant.image}`} alt={plant.name} />
                             </div>
-                            <div className="px-5 lg:px-7 mt-30 lg:mt-45 text-white/70 flex flex-col gap-2 lg:gap-4">
+
+                            <div className="px-5 lg:px-7 text-white/70 flex flex-col gap-2 lg:gap-4">
                                 <p className="text-xs md:text-lg lg:text-2xl">{plant.name}</p>
                                 <p className="text-[8px] md:text-[10px] lg:text-[13px] line-clamp-2">{plant.description}</p>
                                 <div className="flex items-center justify-between md:mt-2">
