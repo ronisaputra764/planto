@@ -1,24 +1,8 @@
 import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion } from "motion/react"
+import { plants } from "../data";
 
-const plants = [
-    {
-        name: "Calathea Plant",
-        image: "assets/img/plant1.png",
-        desc: "Trendy House Plant",
-    },
-    {
-        name: "Monstera ",
-        image: "assets/img/plant2.png",
-        desc: "Elegant Indoor Plant",
-    },
-    {
-        name: "Snake Plant",
-        image: "assets/img/plant3.png",
-        desc: "Air Purifier Plant",
-    },
-];
 
 export default function InteractiveCard() {
 
@@ -45,8 +29,8 @@ export default function InteractiveCard() {
                     <AnimatePresence mode="wait">
                         <motion.img
                             key={plant.image}
-                            src={plant.image}
-                            alt=""
+                            src={`/assets/img/${plant.image}`}
+                            alt="plant image"
                             initial={{ opacity: 0, x: 100 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -100 }}
@@ -55,7 +39,7 @@ export default function InteractiveCard() {
                         />
                     </AnimatePresence>
                     <div className="relative ms-1 -top-8">
-                        <p className=" text-[7px] md:text-[10px] lg:text-[15px] mb-1">{plant.desc}</p>
+                        <p className=" text-[7px] md:text-[10px] lg:text-[15px] mb-1">{plant.tag}</p>
                         <div className=" flex items-center justify-between">
                             <h2 className="text-xs md:text-lg lg:text-2xl">{plant.name}</h2>
                             <button onClick={handleNext}>
